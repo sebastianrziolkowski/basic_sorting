@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1521126295 source:d:\cpp\bacis_sorting\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
