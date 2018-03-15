@@ -48,6 +48,17 @@ void BubbleSort(int *tab, int tabsize)
 }
 
 
+void  Insertion_Sort(int *tab, int tabsize)
+{
+    int temp;
+    for(int i=1;i<tabsize;i++)
+    {
+        temp=tab[i];
+
+    }
+}
+
+
 
 int main()
 {
@@ -55,7 +66,7 @@ int main()
     srand( time( NULL ) );
     int *tab = CreateTab(tab, tabsize);
     tab=WorstTabToSort(tab, tabsize);
-    BubbleSort(tab, tabsize);
+    Insertion_Sort(tab, tabsize);
     showTab(tab, tabsize);
 
     return 0;
