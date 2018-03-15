@@ -20,7 +20,6 @@ int* CreateTab(int *tab, int tabsize)
 }
 
 
-
 int* WorstTabToSort(int *tab, int tabsize)
 {
     for(int i=0;i<tabsize;i++)
@@ -29,12 +28,35 @@ int* WorstTabToSort(int *tab, int tabsize)
     return tab;
 }
 
+void BubbleSort(int *tab, int tabsize)
+{
+   bool swapped=true;
+   int i=0;
+   while((swapped==true)&&(i<tabsize-1))
+   {
+     swapped = false;
+     for (int j=0;j<tabsize-i-1;j++)
+     {
+        if (tab[j]>tab[j+1])
+        {
+           swap(tab[j], tab[j+1]);
+           swapped = true;
+        }
+     }
+    i++;
+   }
+}
+
+
+
 int main()
 {
-srand( time( NULL ) );
-int *tab = CreateTab(tab, 10);
-tab=WorstTabToSort(tab,10);
-showTab(tab,10);
+    int tabsize = 10;
+    srand( time( NULL ) );
+    int *tab = CreateTab(tab, tabsize);
+    tab=WorstTabToSort(tab, tabsize);
+    BubbleSort(tab, tabsize);
+    showTab(tab, tabsize);
 
     return 0;
 }
