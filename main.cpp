@@ -112,6 +112,7 @@ void Select_Sorting(int *tab, int tabsize)
 
     default:
         std::cout<<"Wrong input!"<<std::endl;
+        delete []tab;
         exit(0);
         break;
     }
@@ -136,5 +137,6 @@ int main()
     ConsoleInterface();
     Select_Sorting(tab,tabsize);
 
+    delete []tab;
     return 0;
 }
