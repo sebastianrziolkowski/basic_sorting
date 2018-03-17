@@ -112,6 +112,7 @@ void Select_Sorting(int *tab, int tabsize)
 
     default:
         std::cout<<"Wrong input!"<<std::endl;
+        exit(0);
         break;
     }
         showTab(tab,tabsize);
@@ -128,10 +129,10 @@ void ConsoleInterface()
 
 int main()
 {
-    int tabsize = 10;
     srand( time( NULL ) );
-    int *tab = CreateTab(tab, tabsize);
-    tab=WorstTabToSort(tab, tabsize);
+    int tabsize = rand() %50;
+    int *tab = CreateTab(tab, tabsize);         //Create random tab
+    tab=WorstTabToSort(tab, tabsize);          //Comment this to get random tab or uncomment to get worst tab to sort
     ConsoleInterface();
     Select_Sorting(tab,tabsize);
 
